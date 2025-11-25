@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QProcess>
+#include <QMessageBox>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -19,7 +20,8 @@ public:
     ~Widget();
 
 private slots:
-    void on_pushButton_clicked();
+    void on_commit_button_clicked();
+    void on_cancel_button_clicked();
 
 private:
     Ui::Widget *ui;
