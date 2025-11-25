@@ -29,9 +29,14 @@ void Widget::on_commit_button_clicked()
     my_process->start(program);
 }
 
-
 void Widget::on_cancel_button_clicked()
 {
     // 关闭应用程序
     this->close();
+}
+
+void Widget::on_button_one_clicked()
+{
+    expression += "1";
+    ui->cmd_line_edit->setText(expression);
 }

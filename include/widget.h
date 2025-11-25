@@ -22,8 +22,10 @@ public:
 private slots:
     void on_commit_button_clicked();
     void on_cancel_button_clicked();
+    void on_button_one_clicked();
 
 private:
     Ui::Widget *ui;
+    QString expression;
 };
 #endif // WIDGET_H
