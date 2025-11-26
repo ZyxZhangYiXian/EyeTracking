@@ -1,4 +1,5 @@
 #include "widget.h"
+#include "utils.h"
 
 #include <QApplication>
 

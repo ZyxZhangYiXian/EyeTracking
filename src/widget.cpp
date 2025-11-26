@@ -40,3 +40,9 @@ void Widget::on_button_one_clicked()
     expression += "1";
     ui->cmd_line_edit->setText(expression);
 }
+
+void Widget::on_clear_button_clicked()
+{
+    expression.clear();
+    ui->cmd_line_edit->clear();
+}
