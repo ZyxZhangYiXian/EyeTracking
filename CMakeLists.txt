@@ -12,7 +12,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # 查找 Qt 库
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
-# 添加源文件和头文件（关键修改：头文件也要包含在源文件列表中）
+# 查找 OpenCV 库
+find_package(OpenCV REQUIRED)
+# 添加源文件和头文件
 set(PROJECT_SOURCES
     src/main.cpp
     src/widget.cpp
@@ -40,6 +42,8 @@ else()
 endif()
 # 链接 Qt 库
 target_link_libraries(EyeTracking PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+# 链接 OpenCV 库
+target_link_libraries(EyeTracking PRIVATE ${OpenCV_LIBS})
 # 设置包含目录
 target_include_directories(EyeTracking PRIVATE include)
 # 设置应用程序的 bundle 属性（仅适用于 macOS）

@@ -11,7 +11,7 @@ namespace Utils
     {
         public:
         // 计算线面交点
-        static Point3d get_line_plane_intersection(
+        static Point3D get_line_plane_intersection(
             const Point3D& p1, const Point3D& dire_vec,
             const Point3D& p2, const Point3D& nor_vec
         );
